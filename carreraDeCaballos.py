@@ -5,15 +5,15 @@ import time
 print("""\ncarrera de caballos""".title())
 cantidadDeCaballos=int(input('\ningrese la cantidad de jinetes(1,3):'))
 
-caja = ['bastón', 'copa', 'espada', 'oro']
-jinetesCaja2 = ['bastón', 'copa', 'espada', 'oro']
+caja = ['bastón', 'copa  ', 'espada', 'oro   ']
+jinetesCaja2 = ['bastón', 'copa  ', 'espada', 'oro   ']
 print('\n🦯 bastón\n⚔ espada\n🥇 oro\n🍵 copa')
 caballo1=input('selecciona un caballo:')
 caballo2=random.randint(0,3)
 
 
 def eleccionDeCaballo(equino):
-    if equino == 'bastón':
+    if equino == 'bastón' or 'baston':
         eleccion=0
     elif equino == 'copa':
         eleccion=1
