@@ -26,11 +26,6 @@ def eleccionDeCaballo(equino):
 
     return eleccion #0baston, 1copa, 2espada, 3oro
 
-# def maquina(njc, barril):
-#     tomar=barril[njc]
-
-#     return tomar
-# tomado=maquina(caballo2, caja)
 
 # seleccionDeComputadora=eleccionDeCaballo(tomado)
 caballo1=jinetesCaja2.pop(eleccionDeCaballo(caballo1))
@@ -58,8 +53,6 @@ print(losJinetes)
 print('el 1ª jinete elijió:', caballo1,'\nel resto elijió:', qalb) #NOTA: ARREGLAR
 meta = False
 
-# ico2='♘ '
-# ico1='♞ '
 
 def avanzar(jinetes, barril):
     mazo=random.randint(0,3)
@@ -113,33 +106,6 @@ def galope(listaMutada, jinete, aleatoriaCarta, banderaHueso):
 
             # print(kamino)
             # print(listaMutada[x])
-    
-        # else:
-        #     cadena=str(laListaVaAca[x])
-#    return listaMutada
-
-    # bidon=[]
-    # for x in laListaVaAca: #Está corrompido (con :♘)
-    #     cadena=str(x)
-    #     cadena=cadena.rstrip(':♘ ') 
-    #     cadena=cadena.rstrip(':♞ ')#baston . [:2]ba . [2:]ston
-    #     if cadena == aleatoriaCarta:
-    #         if banderaHueso:
-    #             cadena+=':'
-    #             cadena+='. . .'
-    #         else:
-    #             cadena+='. . .'
-    #     print(cadena,'<-cadena, añadicion')
-    #     bidon.append(cadena)
-    # print(bidon, '<- bidon')
-    # for z in bidon:
-    #     print(z)
- 
-# ♞ espada\n♘
-
-    # for x in presentes:
-    #     LL=str(x+':')                      #bastón:
-    #     print(LL)
 
 c=48
 print(obiWanKenowi)
@@ -156,29 +122,3 @@ while c > 0:
     c-=1
 print('presione cualquier tecla para concluir el programa')
 msvcrt.getch()
-
-#####################################################################################################################################
-#     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #     #
-#####################################################################################################################################
-
-# diccionario={
-#         'i5': {'ram1':'$800', 'ram2':'$900', 'ram3':'$1200'},
-#         'i7': {'ram1':'$900', 'ram2':'$1000', 'ram3':'$1400'},
-#         'i9': {'ram1':'$1000', 'ram2':'$1400', 'ram3':'$2000'},
-#     }
-# print('procesador:"i5", "i7", "i9"')
-# ingresarTargeta=input('ingrese procesador:')
-# print(diccionario[ingresarTargeta].items())
-# ingresarRAM=input('ingrese el numero de RAM:')
-# guardarSeleccion=diccionario[ingresarTargeta][ingresarRAM]
-# print(diccionario[ingresarTargeta][ingresarRAM], '\ningrese la opcion 0:no extender, 1:extender. Si extiende el disco a un terabyte o no:')
-# discoExtension=int(input('extensión:'))
-# guardarSeleccion=int(guardarSeleccion.replace('$', ''))
-# if discoExtension==1:
-#    guardarSeleccion=guardarSeleccion+300
-#    print('el total es:','$'+str(guardarSeleccion))
-# elif discoExtension==0:
-#    print('el total es:', guardarSeleccion)
-# else:
-#    print(None)
-# print('programa finalizado')
