@@ -27,7 +27,6 @@ def eleccionDeCaballo(equino):
     return eleccion #0baston, 1copa, 2espada, 3oro
 
 
-# seleccionDeComputadora=eleccionDeCaballo(tomado)
 caballo1=jinetesCaja2.pop(eleccionDeCaballo(caballo1))
 
 def participantes(cantidad, barril):
@@ -64,16 +63,16 @@ def avanzar(jinetes, barril):
 
 def hipodromo(presentes, banderaFantasma):
     establo=['♘ ', '♞ ']
-#    obiWanKenowi=presentes[:]    #presentes está corrompido (con :♘)
+#    obiWanKenowi=presentes[:]    #presentes estaba corrompido (con :♘)
 
     if banderaFantasma:
         for x in range(len(presentes)):
             caballo=random.randint(0,1) #estaba afuera del bucle for
-            presentes[x]=presentes[x]+':'+(establo[caballo])#¡¿?!.. SOLUCIONADO (todos caballos blancos)
+            presentes[x]=presentes[x]+':'+(establo[caballo])
 
     return presentes #retorna ['oro:♘ ', 'copa:♘ ', 'espada:♞ ', 'bastón:♞ '] lista
 
-banderaMistica=True #ver línea 102. (estaba asignado ahí)
+banderaMistica=True #ver línea 112. (estaba asignado ahí)
 obiWanKenowi=hipodromo(losJinetes[:], banderaMistica) #desde presentes. Una copia [:] fantasma para no alterar la lista jinetes.
 
 
