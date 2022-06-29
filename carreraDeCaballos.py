@@ -13,7 +13,7 @@ caballo2=random.randint(0,3)
 
 
 def eleccionDeCaballo(equino):
-    if equino == 'bastón' or 'baston':
+    if equino == 'bastón' or equino == 'baston':
         eleccion=0
     elif equino == 'copa':
         eleccion=1
@@ -31,8 +31,8 @@ caballo1=jinetesCaja2.pop(eleccionDeCaballo(caballo1))
 
 def participantes(cantidad, barril):
     participes=[]
-    for x in range(len(barril)): #ERROR AQUÍ. ¿SOLUCIONADO?.. SOLUCIONADO
-        mazoDeSeleccion = random.randint(0, (len(barril)-1))
+    for x in range(len(barril)): #había un error aquí sobre que al hacer pop barril tenia un valor inferior y habia
+        mazoDeSeleccion = random.randint(0, (len(barril)-1))        #un indice fuera de alcance a la siguiente vuelta
         mutado = barril.pop(mazoDeSeleccion)
         participes.append(mutado)
 
@@ -46,19 +46,21 @@ def participantes(cantidad, barril):
 
 qalb=participantes(cantidadDeCaballos, jinetesCaja2) #1, 2, o 3 caballos. Con Elementos
 
+
+print('el 1ª jinete elijió:', caballo1)
+contador=1
+for z in qalb:                      #acá se imprimen los jinetes en juego
+    contador+=1
+    print('el {}ª jinete elijió:'.format(contador), z)
 losJinetes=list(qalb)
 losJinetes.insert(0, caballo1)
-print(losJinetes)
-print('el 1ª jinete elijió:', caballo1,'\nel resto elijió:', qalb) #NOTA: ARREGLAR
+#print(losJinetes)
 meta = False
 
 
 def avanzar(jinetes, barril):
     mazo=random.randint(0,3)
 
-    for x in jinetes:
-        if x == barril[mazo]:
-            return(x)
     return(barril[mazo])
 
 def hipodromo(presentes, banderaFantasma):
@@ -80,12 +82,12 @@ obiWanKenowi=hipodromo(losJinetes[:], banderaMistica) #desde presentes. Una copi
 def galope(listaMutada, jinete, aleatoriaCarta, banderaHueso):
 
     banderaHueso=False
-    print(jinete, '<-tipos de elementos disponibles.')
+#    print(jinete, '<-tipos de elementos disponibles.')
 
     for x in range(len(jinete)):
         if jinete[x]==aleatoriaCarta:    #bastón.. == bastón
             
-            limite=listaMutada[x].count(' ')
+            limite=listaMutada[x].count(' ', 7)
             if limite==11:
                 print(listaMutada[x], '🏳 ⛄⛄🧉🧉🏳️  llegó')
                 banderaHueso=True
@@ -106,13 +108,14 @@ def galope(listaMutada, jinete, aleatoriaCarta, banderaHueso):
             # print(kamino)
             # print(listaMutada[x])
 
+
 c=48
 print(obiWanKenowi)
 print('presiona algo para avanzar turno.')
 msvcrt.getch()
 while c > 0:
     cartaAleatoria=avanzar(losJinetes, caja)
-    print(cartaAleatoria, '<- carta aleatoria')
+    print('🃏;' ,cartaAleatoria)
     meta=galope(obiWanKenowi, losJinetes, cartaAleatoria, banderaMistica)
     banderaMistica=False
     if meta:
